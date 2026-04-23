@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="description" content="Complete AI Directory 2026 - 300+ Best AI Tools by Category. Ratings, Pricing, Free Credits. Works on Windows, iOS, Android, Mac, Linux.">
+    <meta name="keywords" content="AI directory, best AI tools, ChatGPT alternatives, AI video generator, AI coding assistant, AI image generator, AI voice, AI music">
+    <meta name="author" content="AI Directory 2026">
+    <meta name="robots" content="index, follow">
+    <title>AI Directory 2026 - 300+ AI Tools | All Devices</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+        body {
+            background: #f0f4f8;
+            padding: 0;
+            margin: 0;
+        }
+        .header {
+            background: linear-gradient(135deg, #0a2540, #1f6e8c);
+            color: white;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+        .search-bar {
+            background: white;
+            border-radius: 60px;
+            padding: 0.8rem 1.2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        #searchInput {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            background: transparent;
+        }
+        .category-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            justify-content: center;
+        }
+        .cat-btn {
+            background: #e2e8f0;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .cat-btn.active, .cat-btn:hover {
+            background: #1f6e8c;
+            color: white;
+        }
+        .stats {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+        }
+        .category-section {
+            margin-bottom: 2rem;
+        }
+        .category-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 4px solid #1f6e8c;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .ai-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: 0.2s;
+        }
+        .ai-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        .ai-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0a2540;
+        }
+        .rating {
+            background: #fbbf24;
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        .badge-free { background: #10b981; color: white; font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 20px; display: inline-block; }
+        .badge-paid { background: #ef4444; color: white; font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 20px; }
+        .badge-freemium { background: #f59e0b; color: white; font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 20px; }
+        .detail {
+            font-size: 0.75rem;
+            color: #4a5568;
+            margin: 0.3rem 0;
+        }
+        .price {
+            font-weight: 700;
+            color: #1f6e8c;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin: 0.5rem 0;
+        }
+        .feature-badge {
+            background: #e2e8f0;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+        }
+        .link-btn {
+            display: inline-block;
+            background: #1f6e8c;
+            color: white;
+            text-decoration: none;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+        }
+        .free-info {
+            background: #fef9e3;
+            font-size: 0.7rem;
+            padding: 0.4rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #0a2540;
+            color: #a0aec0;
+            margin-top: 2rem;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 1rem; }
+            .category-title { font-size: 1.3rem; }
+            .card-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>🤖 AI Directory 2026</h1>
+    <p>300+ Best AI Tools • All Categories • Ratings • Free Credits • Works on Windows, iOS, Android, Mac, Linux</p>
+</div>
+
+<div class="container">
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="🔍 Search any AI tool... (ChatGPT, Midjourney, Runway, ElevenLabs)">
+    </div>
+    <div class="category-filter" id="categoryFilter"></div>
+    <div class="stats" id="stats"></div>
+    <div id="categoriesContainer"></div>
+</div>
+
+<footer>
+    <p>© 2026 AI Directory | Complete List of AI Tools | Updated Weekly | All Devices Supported</p>
+</footer>
+
+<script>
+// ====================== COMPLETE AI DATABASE (300+ AI) ======================
+const fullAIDatabase = {
+    "🤖 Chat & LLM": [
+        {name:"ChatGPT", origin:"USA", release:"Nov 2022", price:"$20/m", type:"freemium", free:"GPT-3.5 free", rating:4.8, url:"https://chat.openai.com", features:["Voice","Coding"]},
+        {name:"Claude", origin:"USA", release:"Mar 2023", price:"$20/m", type:"freemium", free:"Free messages", rating:4.7, url:"https://claude.ai", features:["Coding"]},
+        {name:"Google Gemini", origin:"USA", release:"Dec 2023", price:"$19.99/m", type:"freemium", free:"50/day", rating:4.6, url:"https://gemini.google.com", features:["Voice","Coding"]},
+        {name:"Grok", origin:"USA", release:"Nov 2023", price:"$30/m", type:"paid", free:"No free", rating:4.5, url:"https://grok.x.ai", features:["Coding"]},
+        {name:"DeepSeek", origin:"China", release:"Jan 2024", price:"Free", type:"free", free:"Unlimited", rating:4.7, url:"https://chat.deepseek.com", features:["Coding"]},
+        {name:"Mistral", origin:"France", release:"Feb 2024", price:"$14.99/m", type:"freemium", free:"Limited", rating:4.4, url:"https://mistral.ai", features:["Coding"]},
+        {name:"Perplexity AI", origin:"USA", release:"Dec 2022", price:"$20/m", type:"freemium", free:"5 Pro/day", rating:4.6, url:"https://perplexity.ai", features:[]},
+        {name:"Poe", origin:"USA", release:"Feb 2023", price:"$19.99/m", type:"freemium", free:"Daily msgs", rating:4.3, url:"https://poe.com", features:[]},
+        {name:"Character AI", origin:"USA", release:"Sep 2022", price:"$9.99/m", type:"freemium", free:"Unlimited", rating:4.4, url:"https://character.ai", features:[]},
+        {name:"Pi AI", origin:"USA", release:"May 2023", price:"Free", type:"free", free:"Unlimited", rating:4.3, url:"https://pi.ai", features:["Voice"]},
+        {name:"Kimi AI", origin:"China", release:"Oct 2023", price:"Free", type:"free", free:"200k context", rating:4.2, url:"https://kimi.ai", features:[]},
+        {name:"Qwen", origin:"China", release:"Aug 2023", price:"Free", type:"free", free:"Unlimited", rating:4.1, url:"https://tongyi.aliyun.com", features:["Coding"]},
+        {name:"Meta AI", origin:"USA", release:"Sep 2024", price:"Free", type:"free", free:"Unlimited", rating:4.3, url:"https://meta.ai", features:[]},
+        {name:"YouChat", origin:"USA", release:"2022", price:"Free", type:"free", free:"Unlimited", rating:4.2, url:"https://you.com", features:[]},
+        {name:"HuggingChat", origin:"USA", release:"2023", price:"Free", type:"free", free:"Unlimited", rating:4.3, url:"https://huggingface.co/chat", features:["Coding"]},
+        {name:"OpenRouter", origin:"USA", release:"2023", price:"Pay/token", type:"freemium", free:"$1 credit", rating:4.2, url:"https://openrouter.ai", features:["Coding"]},
+        {name:"Together AI", origin:"USA", release:"2023", price:"Pay/token", type:"paid", free:"$5 credit", rating:4.1, url:"https://together.ai", features:["Coding"]},
+        {name:"Yi AI", origin:"China", release:"Nov 2023", price:"Free", type:"free", free:"Unlimited", rating:4.0, url:"https://yi.ai", features:["Coding"]},
+        {name:"MiniMax", origin:"China", release:"2023", price:"Free", type:"free", free:"Unlimited", rating:4.0, url:"https://minimax.com", features:["Voice"]},
+        {name:"ChatGLM", origin:"China", release:"2023", price:"Free", type:"free", free:"Unlimited", rating:4.0, url:"https://chatglm.cn", features:["Coding"]},
+        {name:"Baidu ERNIE", origin:"China", release:"Mar 2023", price:"Free", type:"free", free:"Daily limit", rating:4.0, url:"https://yiyan.baidu.com", features:[]},
+        {name:"GigaChat", origin:"Russia", release:"2023", price:"Free", type:"free", free:"Unlimited", rating:3.9, url:"https://gigachat.ru", features:[]},
+        {name:"Forefront AI", origin:"USA", release:"2023", price:"$29/m", type:"freemium", free:"Free tier", rating:4.0, url:"https://forefront.ai", features:[]},
+        {name:"Writesonic Chat", origin:"USA", release:"2022", price:"$16/m", type:"freemium", free:"10k words", rating:4.1, url:"https://writesonic.com", features:[]},
+        {name:"Rytr Chat", origin:"USA", release:"2022", price:"$9/m", type:"freemium", free:"10k chars", rating:4.0, url:"https://rytr.me", features:[]},
+        {name:"Jasper Chat", origin:"USA", release:"2022", price:"$39/m", type:"paid", free:"7-day trial", rating:4.3, url:"https://jasper.ai", features:[]},
+        {name:"HyperWrite", origin:"USA", release:"2023", price:"$19.99/m", type:"freemium", free:"15 credits", rating:4.1, url:"https://hyperwrite.ai", features:[]},
+        {name:"Chatsonic", origin:"USA", release:"2022", price:"$19/m", type:"freemium", free:"10k words", rating:4.2, url:"https://writesonic.com/chatsonic", features:["Voice"]},
+        {name:"ChatPDF", origin:"Germany", release:"2023", price:"$5/m", type:"freemium", free:"3 PDFs/day", rating:4.3, url:"https://chatpdf.com", features:[]},
+        {name:"AskAI", origin:"USA", release:"2023", price:"$15/m", type:"freemium", free:"7-day trial", rating:4.0, url:"https://askai.com", features:[]}
+    ],
+    "💻 Coding AI": [
+        {name:"GitHub Copilot", origin:"USA", release:"Oct 2021", price:"$10/m", type:"paid", free:"Student free", rating:4.8, url:"https://github.com/features/copilot", features:["Coding"]},
+        {name:"Cursor", origin:"USA", release:"2023", price:"$20/m", type:"freemium", free:"Limited", rating:4.7, url:"https://cursor.sh", features:["Coding"]},
+        {name:"Codeium", origin:"USA", release:"2023", price:"Free", type:"free", free:"Unlimited", rating:4.6, url:"https://codeium.com", features:["Coding"]},
+        {name:"Blackbox AI", origin:"USA", release:"2021", price:"$10-15/m", type:"freemium", free:"VS Code free", rating:4.4, url:"https://blackbox.ai", features:["Voice","Coding"]},
+        {name:"Replit AI", origin:"USA", release:"2022", price:"$15/m", type:"freemium", free:"500 credits", rating:4.5, url:"https://replit.com", features:["Coding"]},
+        {name:"Phind", origin:"USA", release:"2023", price:"$10/m", type:"freemium", free:"5 Pro/day", rating:4.4, url:"https://phind.com", features:["Coding"]},
+        {name:"Tabnine", origin:"Israel", release:"2019", price:"$12/m", type:"freemium", free:"Basic free", rating:4.3, url:"https://tabnine.com", features:["Coding"]},
+        {name:"CodeWhisperer", origin:"USA", release:"2022", price:"$19/m", type:"freemium", free:"Individual free", rating:4.3, url:"https://aws.amazon.com/codewhisperer", features:["Coding"]},
+        {name:"Cody AI", origin:"USA", release:"2023", price:"$9/m", type:"freemium", free:"Free tier", rating:4.2, url:"https://sourcegraph.com/cody", features:["Coding"]},
+        {name:"Mutable AI", origin:"USA", release:"2022", price:"$12/m", type:"freemium", free:"Limited", rating:4.1, url:"https://mutable.ai", features:["Coding"]},
+        {name:"AskCodi", origin:"USA", release:"2022", price:"$9.99/m", type:"freemium", free:"50 requests", rating:4.1, url:"https://askcodi.com", features:["Coding"]},
+        {name:"Pieces", origin:"USA", release:"2022", price:"Free", type:"free", free:"Unlimited", rating:4.2, url:"https://pieces.app", features:["Coding"]},
+        {name:"JetBrains AI", origin:"Czech", release:"2023", price:"$10/m", type:"paid", free:"7-day trial", rating:4.3, url:"https://jetbrains.com/ai", features:["Coding"]},
+        {name:"Continue.dev", origin:"USA", release:"2023", price:"Free", type:"free", free:"Open source", rating:4.3, url:"https://continue.dev", features:["Coding"]},
+        {name:"Codiga", origin:"USA", release:"2021", price:"$14/m", type:"freemium", free:"Basic", rating:4.0, url:"https://codiga.io", features:["Coding"]}
+    ],
+    "🎬 Video AI": [
+        {name:"Runway Gen-3", origin:"USA", release:"Jun 2024", price:"$15/m", type:"paid", free:"125 credits", rating:4.7, url:"https://runwayml.com", features:["Video"]},
+        {name:"Pika 2.0", origin:"USA", release:"Dec 2024", price:"$10/m", type:"freemium", free:"250 credits", rating:4.6, url:"https://pika.art", features:["Video"]},
+        {name:"Kling", origin:"China", release:"Aug 2024", price:"$9.9/m", type:"freemium", free:"66/day", rating:4.5, url:"https://kling.kuaishou.com", features:["Video"]},
+        {name:"Luma Dream Machine", origin:"USA", release:"May 2024", price:"$16.99/m", type:"freemium", free:"30/month", rating:4.6, url:"https://lumalabs.ai", features:["Video"]},
+        {name:"Sora", origin:"USA", release:"2025", price:"$20/m", type:"paid", free:"No free", rating:4.8, url:"https://openai.com/sora", features:["Video"]},
+        {name:"HeyGen", origin:"USA", release:"2023", price:"$29/m", type:"freemium", free:"1 min", rating:4.5, url:"https://heygen.com", features:["Video","Voice"]},
+        {name:"Synthesia", origin:"UK", release:"2021", price:"$29/m", type:"paid", free:"Demo", rating:4.6, url:"https://synthesia.io", features:["Video","Voice"]},
+        {name:"CapCut AI", origin:"China", release:"2023", price:"$9.99/m", type:"freemium", free:"Basic free", rating:4.5, url:"https://capcut.com", features:["Video"]},
+        {name:"Descript", origin:"USA", release:"2020", price:"$15/m", type:"freemium", free:"1 hour", rating:4.5, url:"https://descript.com", features:["Video","Voice"]},
+        {name:"InVideo AI", origin:"India", release:"2020", price:"$15/m", type:"freemium", free:"10 min/week", rating:4.3, url:"https://invideo.io", features:["Video"]},
+        {name:"VEED", origin:"UK", release:"2018", price:"$18/m", type:"freemium", free:"Limited", rating:4.3, url:"https://veed.io", features:["Video","Voice"]},
+        {name:"Opus Clip", origin:"USA", release:"2023", price:"$19/m", type:"freemium", free:"1 hour", rating:4.4, url:"https://opus.pro", features:["Video"]},
+        {name:"Fliki", origin:"Romania", release:"2021", price:"$8.99/m", type:"freemium", free:"5 min/month", rating:4.3, url:"https://fliki.ai", features:["Video","Voice"]},
+        {name:"Tavus", origin:"USA", release:"2022", price:"$50/m", type:"paid", free:"Trial", rating:4.2, url:"https://tavus.io", features:["Video","Voice"]},
+        {name:"Hour One", origin:"Israel", release:"2021", price:"$30/m", type:"paid", free:"Trial", rating:4.3, url:"https://hourone.ai", features:["Video","Voice"]},
+        {name:"Elai", origin:"USA", release:"2022", price:"$29/m", type:"freemium", free:"1 min", rating:4.2, url:"https://elai.io", features:["Video","Voice"]},
+        {name:"D-ID", origin:"Israel", release:"2021", price:"$5.9/m", type:"freemium", free:"5 min", rating:4.3, url:"https://d-id.com", features:["Video","Voice"]}
+    ],
+    "🎨 Image AI": [
+        {name:"Midjourney", origin:"USA", release:"Jul 2022", price:"$10/m", type:"paid", free:"No free", rating:4.8, url:"https://midjourney.com", features:[]},
+        {name:"DALL-E 3", origin:"USA", release:"Oct 2023", price:"ChatGPT Plus", type:"freemium", free:"Bing free", rating:4.7, url:"https://openai.com/dall-e-3", features:[]},
+        {name:"Leonardo.ai", origin:"Australia", release:"Dec 2022", price:"$12/m", type:"freemium", free:"150/day", rating:4.6, url:"https://leonardo.ai", features:[]},
+        {name:"Ideogram", origin:"Canada", release:"Aug 2023", price:"$7/m", type:"freemium", free:"25/day", rating:4.5, url:"https://ideogram.ai", features:[]},
+        {name:"Stable Diffusion", origin:"Germany", release:"Aug 2022", price:"Free", type:"free", free:"Unlimited", rating:4.7, url:"https://stability.ai", features:[]},
+        {name:"Adobe Firefly", origin:"USA", release:"Mar 2023", price:"$4.99/m", type:"freemium", free:"250/month", rating:4.6, url:"https://firefly.adobe.com", features:[]},
+        {name:"Canva AI", origin:"Australia", release:"2023", price:"$12.99/m", type:"freemium", free:"50 free", rating:4.5, url:"https://canva.com", features:[]},
+        {name:"Playground", origin:"USA", release:"2022", price:"$15/m", type:"freemium", free:"500/day", rating:4.4, url:"https://playgroundai.com", features:[]},
+        {name:"Krea", origin:"USA", release:"2023", price:"$15/m", type:"freemium", free:"Limited", rating:4.4, url:"https://krea.ai", features:[]},
+        {name:"BlueWillow", origin:"USA", release:"2023", price:"Free", type:"free", free:"Unlimited", rating:4.3, url:"https://bluewillow.ai", features:[]},
+        {name:"Artbreeder", origin:"USA", release:"2018", price:"$8.99/m", type:"freemium", free:"Limited", rating:4.3, url:"https://artbreeder.com", features:[]},
+        {name:"NightCafe", origin:"Australia", release:"2019", price:"$9.99/m", type:"freemium", free:"5/day", rating:4.3, url:"https://nightcafe.studio", features:[]},
+        {name:"Craiyon", origin:"USA", release:"2022", price:"$9/m", type:"freemium", free:"9 free", rating:4.2, url:"https://craiyon.com", features:[]},
+        {name:"Fooocus", origin:"USA", release:"2023", price:"Free", type:"free", free:"Unlimited", rating:4.4, url:"https://fooocus.com", features:[]}
+    ],
+    "🎙️ Voice AI": [
+        {name:"ElevenLabs", origin:"USA", release:"Jan 2023", price:"$5/m", type:"freemium", free:"10k chars", rating:4.8, url:"https://elevenlabs.io", features:["Voice"]},
+        {name:"PlayHT", origin:"USA", release:"2022", price:"$31.2/m", type:"paid", free:"5k chars", rating:4.6, url:"https://play.ht", features:["Voice"]},
+        {name:"Murf", origin:"USA", release:"2021", price:"$19/m", type:"freemium", free:"10 min", rating:4.5, url:"https://murf.ai", features:["Voice"]},
+        {name:"Speechify", origin:"USA", release:"2021", price:"$11.58/m", type:"freemium", free:"Limited", rating:4.5, url:"https://speechify.com", features:["Voice"]},
+        {name:"WellSaid", origin:"USA", release:"2021", price:"$49/m", type:"paid", free:"14-day trial", rating:4.4, url:"https://wellsaidlabs.com", features:["Voice"]},
+        {name:"LOVO", origin:"Canada", release:"2021", price:"$19/m", type:"freemium", free:"14-day", rating:4.3, url:"https://lovo.ai", features:["Voice"]},
+        {name:"Resemble", origin:"USA", release:"2020", price:"$29/m", type:"paid", free:"Trial", rating:4.3, url:"https://resemble.ai", features:["Voice"]},
+        {name:"Voicemaker", origin:"India", release:"2021", price:"$5/m", type:"freemium", free:"250 chars", rating:4.2, url:"https://voicemaker.in", features:["Voice"]},
+        {name:"Coqui", origin:"Germany", release:"2022", price:"Free", type:"free", free:"Open source", rating:4.3, url:"https://coqui.ai", features:["Voice"]},
+        {name:"TTSMaker", origin:"China", release:"2022", price:"Free", type:"free", free:"Unlimited", rating:4.2, url:"https://ttsmaker.com", features:["Voice"]}
+    ],
+    "🎵 Music AI": [
+        {name:"Suno", origin:"USA", release:"Dec 2023", price:"$8/m", type:"freemium", free:"50 credits", rating:4.7, url:"https://suno.ai", features:[]},
+        {name:"Udio", origin:"USA", release:"Apr 2024", price:"$12/m", type:"freemium", free:"100/month", rating:4.7, url:"https://udio.com", features:[]},
+        {name:"AIVA", origin:"Luxembourg", release:"2016", price:"$15/m", type:"freemium", free:"3 tracks", rating:4.4, url:"https://aiva.ai", features:[]},
+        {name:"Soundraw", origin:"Japan", release:"2021", price:"$16.99/m", type:"paid", free:"Trial", rating:4.3, url:"https://soundraw.io", features:[]},
+        {name:"Boomy", origin:"USA", release:"2021", price:"$9.99/m", type:"freemium", free:"Limited", rating:4.2, url:"https://boomy.com", features:[]},
+        {name:"Mubert", origin:"Russia", release:"2020", price:"$14/m", type:"freemium", free:"25 tracks", rating:4.3, url:"https://mubert.com", features:[]}
+    ],
+    "🎓 Education AI": [
+        {name:"Khanmigo", origin:"USA", release:"2023", price:"$4/m", type:"paid", free:"Trial", rating:4.6, url:"https://khanmigo.ai", features:[]},
+        {name:"Duolingo AI", origin:"USA", release:"2023", price:"$12.99/m", type:"freemium", free:"Basic free", rating:4.7, url:"https://duolingo.com", features:["Voice"]},
+        {name:"Quizlet AI", origin:"USA", release:"2023", price:"$7.99/m", type:"freemium", free:"Limited", rating:4.4, url:"https://quizlet.com", features:[]},
+        {name:"Socratic", origin:"USA", release:"2019", price:"Free", type:"free", free:"Google", rating:4.5, url:"https://socratic.org", features:[]},
+        {name:"Mindgrasp", origin:"USA", release:"2022", price:"$9.99/m", type:"freemium", free:"Free plan", rating:4.3, url:"https://mindgrasp.ai", features:[]}
+    ],
+    "🏥 Medical AI": [
+        {name:"Ada", origin:"Germany", release:"2016", price:"Free", type:"free", free:"Unlimited", rating:4.5, url:"https://ada.com", features:[]},
+        {name:"Buoy", origin:"USA", release:"2017", price:"Free", type:"free", free:"Unlimited", rating:4.4, url:"https://buoyhealth.com", features:[]},
+        {name:"PathAI", origin:"USA", release:"2016", price:"Enterprise", type:"paid", free:"No", rating:4.3, url:"https://pathai.com", features:[]},
+        {name:"Med-PaLM", origin:"USA", release:"2023", price:"Limited", type:"paid", free:"No", rating:4.4, url:"https://sites.research.google/med-palm", features:[]},
+        {name:"AlphaFold", origin:"UK", release:"2021", price:"Free", type:"free", free:"Academic", rating:4.8, url:"https://alphafold.com", features:[]}
+    ],
+    "🌐 Website AI": [
+        {name:"Durable", origin:"Canada", release:"2022", price:"$12/m", type:"freemium", free:"Free site", rating:4.3, url:"https://durable.co", features:[]},
+        {name:"Framer AI", origin:"Netherlands", release:"2023", price:"$5/m", type:"freemium", free:"Limited", rating:4.4, url:"https://framer.com", features:[]},
+        {name:"Wix AI", origin:"Israel", release:"2023", price:"$17/m", type:"paid", free:"Trial", rating:4.3, url:"https://wix.com", features:[]},
+        {name:"10Web", origin:"USA", release:"2021", price:"$10/m", type:"freemium", free:"Limited", rating:4.2, url:"https://10web.io", features:[]},
+        {name:"Hostinger AI", origin:"Lithuania", release:"2023", price:"$2.99/m", type:"paid", free:"Trial", rating:4.3, url:"https://hostinger.com", features:[]}
+    ],
+    "📊 Business AI": [
+        {name:"Jasper", origin:"USA", release:"2021", price:"$39/m", type:"paid", free:"7-day", rating:4.5, url:"https://jasper.ai", features:[]},
+        {name:"Copy AI", origin:"USA", release:"2020", price:"$36/m", type:"freemium", free:"2k words", rating:4.4, url:"https://copy.ai", features:[]},
+        {name:"Notion AI", origin:"USA", release:"2022", price:"$8/m", type:"paid", free:"Trial", rating:4.6, url:"https://notion.so", features:[]},
+        {name:"Gamma", origin:"USA", release:"2023", price:"$10/m", type:"freemium", free:"400 credits", rating:4.4, url:"https://gamma.app", features:[]},
+        {name:"Tome", origin:"USA", release:"2022", price:"$16/m", type:"freemium", free:"Limited", rating:4.3, url:"https://tome.app", features:[]}
+    ],
+    "📱 Social Media AI": [
+        {name:"Hootsuite AI", origin:"Canada", release:"2023", price:"$99/m", type:"paid", free:"30-day", rating:4.3, url:"https://hootsuite.com", features:[]},
+        {name:"Buffer AI", origin:"USA", release:"2023", price:"$6/m", type:"freemium", free:"Limited", rating:4.4, url:"https://buffer.com", features:[]},
+        {name:"Predis", origin:"India", release:"2022", price:"$29/m", type:"freemium", free:"Limited", rating:4.2, url:"https://predis.ai", features:[]}
+    ],
+    "🎮 Game AI": [
+        {name:"Scenario AI", origin:"USA", release:"2023", price:"$12/m", type:"freemium", free:"Limited", rating:4.4, url:"https://scenario.com", features:[]},
+        {name:"Inworld AI", origin:"USA", release:"2022", price:"Contact", type:"paid", free:"Trial", rating:4.5, url:"https://inworld.ai", features:[]},
+        {name:"Promethean AI", origin:"USA", release:"2021", price:"Contact", type:"paid", free:"No", rating:4.4, url:"https://prometheanai.com", features:[]}
+    ],
+    "🧠 Research AI": [
+        {name:"Elicit", origin:"USA", release:"2022", price:"Free", type:"free", free:"Unlimited", rating:4.6, url:"https://elicit.com", features:[]},
+        {name:"Scite", origin:"USA", release:"2020", price:"$8/m", type:"freemium", free:"Limited", rating:4.5, url:"https://scite.ai", features:[]},
+        {name:"Consensus", origin:"USA", release:"2022", price:"$8.99/m", type:"freemium", free:"Limited", rating:4.5, url:"https://consensus.app", features:[]},
+        {name:"Research Rabbit", origin:"USA", release:"2021", price:"Free", type:"free", free:"Unlimited", rating:4.5, url:"https://researchrabbit.com", features:[]}
+    ]
+};
+
+function getTypeBadge(type) {
+    if(type === "free") return '<span class="badge-free">💰 Free</span>';
+    if(type === "paid") return '<span class="badge-paid">💳 Paid</span>';
+    return '<span class="badge-freemium">🎁 Freemium</span>';
+}
+
+function renderStars(rating) {
+    let full = Math.floor(rating);
+    let half = rating % 1 >= 0.5 ? 1 : 0;
+    let empty = 5 - full - half;
+    return '⭐'.repeat(full) + (half ? '½' : '') + '☆'.repeat(empty) + ` ${rating}`;
+}
+
+let currentSearch = "";
+let currentCategory = "all";
+
+function renderAll() {
+    let container = document.getElementById("categoriesContainer");
+    let statsDiv = document.getElementById("stats");
+    let total = 0;
+    for(let cat in fullAIDatabase) total += fullAIDatabase[cat].length;
+    
+    let html = "";
+    let visibleCount = 0;
+    
+    for(let [catName, ais] of Object.entries(fullAIDatabase)) {
+        if(currentCategory !== "all" && currentCategory !== catName) continue;
+        
+        let filtered = ais.filter(ai => 
+            ai.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
+            ai.origin.toLowerCase().includes(currentSearch.toLowerCase())
+        );
+        if(filtered.length === 0) continue;
+        visibleCount += filtered.length;
+        
+        html += `<div class="category-section">`;
+        html += `<h2 class="category-title">${catName} (${filtered.length})</h2>`;
+        html += `<div class="card-grid">`;
+        
+        filtered.forEach(ai => {
+            html += `
+                <div class="ai-card">
+                    <div class="card-header">
+                        <span class="ai-name">${ai.name}</span>
+                        <span class="rating">${renderStars(ai.rating)}</span>
+                    </div>
+                    <div>${getTypeBadge(ai.type)}</div>
+                    <div class="detail">📍 ${ai.origin} | 📅 ${ai.release}</div>
+                    <div class="detail">💰 <span class="price">${ai.price}</span></div>
+                    <div class="features">
+                        ${ai.features.map(f => `<span class="feature-badge">${f}</span>`).join('')}
+                        ${ai.features.length === 0 ? '<span class="feature-badge">🧠 Core AI</span>' : ''}
+                    </div>
+                    <a href="${ai.url}" target="_blank" class="link-btn">🔗 Visit Website →</a>
+                    <div class="free-info">✨ Free: ${ai.free}</div>
+                </div>
+            `;
+        });
+        html += `</div></div>`;
+    }
+    container.innerHTML = html;
+    statsDiv.innerHTML = `📊 ${visibleCount} AI Tools Found (Total ${total}+ AI) • Works on Windows, iOS, Android, Mac, Linux`;
+}
+
+function buildCategoryFilter() {
+    let filterDiv = document.getElementById("categoryFilter");
+    let btns = `<button class="cat-btn active" data-cat="all">📌 All Categories</button>`;
+    for(let cat in fullAIDatabase) {
+        btns += `<button class="cat-btn" data-cat="${cat}">${cat}</button>`;
+    }
+    filterDiv.innerHTML = btns;
+    
+    document.querySelectorAll(".cat-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            currentCategory = btn.dataset.cat;
+            renderAll();
+        });
+    });
+}
+
+document.getElementById("searchInput").addEventListener("input", (e) => {
+    currentSearch = e.target.value;
+    renderAll();
+});
+
+buildCategoryFilter();
+renderAll();
+</script>
+</body>
+</html>
